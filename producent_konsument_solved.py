@@ -98,7 +98,7 @@ class DistributedPOW(SimBase):
             # Według dokumentów, jeśli zwraca prawdę, to nie gwarantuje
             # get nie będzie próbował pobrać z pustej kolejki, więc po prostu
             # zignoruj ​​to, jeśli tak się stanie
-            except Queue.Empty:
+            except queue.Empty:
                 pass
         
         logger_c.debug("{} Gotowe!".format(threading.current_thread().name))
